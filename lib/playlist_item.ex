@@ -1,5 +1,5 @@
 defmodule PlaylistItem do
-  def convert_item(item) do
+  def extract_item(item) do
     snippet = item["snippet"]
     video_id = snippet["resourceId"]["videoId"]
     

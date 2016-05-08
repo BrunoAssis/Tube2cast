@@ -6,11 +6,10 @@ defmodule Playlist do
     YouTube.start
     YouTube.get!(url)
     |> Map.get(:body)
-    |> convert_items
+    |> extract_items
   end
 
-  defp convert_items(playlist) do
-    %{"items" => items} = playlist
-    Enum.map(items, &PlaylistItem.convert_item/1)
+  defp extract_items(playlist) do
+    Enum.map(playlist["items"], &PlaylistItem.extract_item/1)
   end
 end
