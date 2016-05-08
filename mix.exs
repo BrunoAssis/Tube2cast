@@ -20,7 +20,8 @@ defmodule Tube2cast.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.8.0"},
-      {:poison, "~> 2.0"}
+      {:poison, "~> 2.0"},
+      {:html_entities, "~> 0.3"}
     ]
   end
 end

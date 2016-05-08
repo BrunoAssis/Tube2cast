@@ -1,5 +1,6 @@
 %{"certifi": {:hex, :certifi, "0.4.0"},
   "hackney": {:hex, :hackney, "1.6.0"},
+  "html_entities": {:hex, :html_entities, "0.3.0"},
   "httpoison": {:hex, :httpoison, "0.8.3"},
   "idna": {:hex, :idna, "1.2.0"},
   "metrics": {:hex, :metrics, "1.0.1"},

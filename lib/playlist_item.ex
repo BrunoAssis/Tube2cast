@@ -18,6 +18,7 @@ defmodule PlaylistItem do
     
     output
     |> String.strip
+    |> HtmlEntities.encode
   end
 
   defp choose_format(video_id) do
