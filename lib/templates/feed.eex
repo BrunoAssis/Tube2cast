@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<channel>
+        <title>Tube2cast Test</title>
+        <atom:link href="http://www.brunoassis.org/feed/podcast/" rel="self" type="application/rss+xml" />
+        <link>http://www.brunoassis.org</link>
+        <description>Tube2cast Default Test.</description>
+        <lastBuildDate>Thu, 07 May 2015 19:41:32 +0000</lastBuildDate>
+        <language>pt-BR</language>
+        <generator>http://wordpress.org/?v=4.2.2</generator>
+        <itunes:new-feed-url>http://www.brunoassis.org</itunes:new-feed-url>
+        <itunes:summary>Tube2cast Default Test.</itunes:summary>
+        <itunes:author>Bruno Assis</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="https://d13pix9kaak6wt.cloudfront.net/avatar/users/b/r/u/brunoassis_1366125169_97.jpg" />
+        <itunes:owner>
+                <itunes:name>Bruno Assis</itunes:name>
+                <itunes:email>brunoassis@gmail.com</itunes:email>
+        </itunes:owner>
+        <managingEditor>brunoassis@gmail.com (Bruno Assis)</managingEditor>
+        <copyright>2014-2016</copyright>
+        <itunes:subtitle>Default subtitle</itunes:subtitle>
+        <image>
+                <title>Tube2cast</title>
+                <url>https://d13pix9kaak6wt.cloudfront.net/avatar/users/b/r/u/brunoassis_1366125169_97.jpg</url>
+                <link>http://www.brunoassis.org</link>
+        </image>
+        <itunes:category text="Society &amp; Culture">
+          <itunes:category text="History" />
+        </itunes:category>
+
+        <%= feed_items %>
+</channel>
+</rss>
