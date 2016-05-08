@@ -1,5 +1,3 @@
-require IEx
-
 defmodule Playlist do
   @api_key "AIzaSyC7HMqZfMnmMMYFNugV8iPnxaKAhSQqr9M"
 
