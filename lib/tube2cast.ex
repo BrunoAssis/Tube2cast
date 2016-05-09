@@ -1,12 +1,28 @@
 defmodule Tube2cast do
   def run! do
-    playlist_id = "PLX4wzH6YPQH3x25S7U6zp56wTopd1YYEN"
-    items = Playlist.fetch(playlist_id)
+    IO.puts "Starting process."
+    xml_feed = Playlist.fetch("PLX4wzH6YPQH3x25S7U6zp56wTopd1YYEN")
+               |> to_feed
+    IO.puts "Writing file."
+    File.open!("feed.xml", [:write])
+    |> IO.binwrite(xml_feed)
+    |> File.close
+    IO.puts "Ending process."
+  end
 
-    feed_items = Stream.with_index(items)
-                 |> Enum.map(fn ({item, index}) -> Templates.feed_item(item, index) end)
-                 |> Enum.join
+  defp to_feed(items) do
+    items
+    |> generate_feed_items_xml
+    |> Templates.feed
+  end
 
-    Templates.feed(feed_items)
+  defp generate_feed_items_xml(items) do
+    Stream.with_index(items)
+    |> Enum.map(&generate_feed_item_xml/1)
+    |> Enum.join
+  end
+
+  defp generate_feed_item_xml({item, index}) do
+    Templates.feed_item(item, index)
   end
 end

@@ -1,5 +1,6 @@
 defmodule PlaylistItem do
   def extract_item(item) do
+    IO.inspect(item)
     snippet = item["snippet"]
     video_id = snippet["resourceId"]["videoId"]
     
